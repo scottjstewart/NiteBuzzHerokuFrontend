@@ -1,0 +1,40 @@
+<div color="primary">
+  <h2 mat-dialog-title>Start a New Buzz</h2>
+  <mat-dialog-content [formGroup]="form">
+    <p>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Location</mat-label>
+        <input matInput placeholder="Location Name" formControlName="location">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Category</mat-label>
+        <input matInput placeholder="Category" formControlName="category">
+        <mat-hint>e.g. bar, concert, etc.</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Price" formControlName="price">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Fun Factor</mat-label>
+        <input matInput placeholder="Fun Factor (1-5)" formControlName="funFactor">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Details</mat-label>
+        <textarea matInput placeholder="Details" formControlName="details"></textarea>
+      </mat-form-field>
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button color="accent" (click)="close()">Cancel</button>
+    <button mat-raised-button color="accent" (click)="submit()">Submit</button>
+  </mat-dialog-actions>
+</div>

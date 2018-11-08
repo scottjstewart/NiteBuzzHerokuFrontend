@@ -1,0 +1,38 @@
+<mat-card>
+  <h1>{{buzz.title}}</h1>
+  <h6>Posted by: {{buzz.Buzzer.userName}} <span><br>{{buzz.createdAt | date:'fullDate'}}</span></h6>
+  <mat-divider></mat-divider>
+  <table>
+    <tr>
+      <th>Location</th>
+      <th>Price</th>
+      <th>Fun Factor</th>
+      <th>Upvotes</th>
+    </tr>
+    <tr>
+      <td>{{buzz.location}}</td>
+      <td>{{buzz.price}}</td>
+      <td>{{buzz.funFactor}}</td>
+      <td>{{buzz.upvotes}}</td>
+    </tr>
+  </table>
+  <h4>Details:</h4>
+  <p>{{buzz.details}}</p>
+  <div>
+    <h4>Comments:
+      <span>
+        <button mat-raised-button color="accent" (click)="openDialog(buzz.title, buzz.details)">Comment</button>
+      </span>
+    </h4>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-list *ngIf="buzz">
+    <mat-list-item *ngFor="let comment of buzz.Comments">
+      <p mat-line></p>
+      <h5 mat-line><b>{{comment.Commenter.userName}}</b></h5>
+      <p mat-line>{{comment.text}}</p>
+      <p mat-line><small>at: {{comment.createdAt | date:'fullDate'}}</small></p>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
