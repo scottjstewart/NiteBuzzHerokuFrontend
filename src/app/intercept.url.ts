@@ -6,8 +6,9 @@ import {
 } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { APIURL } from "../environments/environment.prod";
 
-const base = "http://nitebuzz2018v1.herokuapp.com";
+const base = `${APIURL}`;
 
 @Injectable()
 export class UrlInterceptor implements HttpInterceptor {

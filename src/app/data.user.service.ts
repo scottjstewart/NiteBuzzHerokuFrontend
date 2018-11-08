@@ -3,8 +3,9 @@ import { Observable, of } from "rxjs";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError, tap, map } from "rxjs/operators";
 import { User } from "./user.model";
+import { APIURL } from "../environments/environment.prod";
 
-const url = "http://localhost:3000/user";
+const url = `${APIURL}/user`;
 let options = new HttpHeaders({
   "Content-Type": "application/json"
 });
@@ -13,7 +14,7 @@ let options = new HttpHeaders({
   providedIn: "root"
 })
 export class UserService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // login(cred: string, password: string): Observable<any> {
   //   return this.http.post<any>(`${url}/login`, { userName: cred, password: password }).pipe(
