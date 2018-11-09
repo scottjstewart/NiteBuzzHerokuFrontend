@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod",
-    "start": "serve -s dist/client"
+    "postinstall": "ng build",
+    "start": "node server.js"
   },
   "engines": {
     "node": "8.11.4",
@@ -34,7 +34,8 @@
     "zone.js": "~0.8.26",
     "node": "8.11.4",
     "npm": "6.4.1",
-    "@types/node": "~8.9.4"
+    "@types/node": "~8.9.4",
+    "typescript": "~3.1.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
