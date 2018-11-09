@@ -34,10 +34,12 @@ export class MakebuzzComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
+      title: new FormControl(),
       location: new FormControl(),
       price: new FormControl(),
       funFactor: new FormControl(),
-      details: new FormControl()
+      details: new FormControl(),
+      category: new FormControl()
     });
     this.geo.getLocation().subscribe(res => {
       this.loc = res;
@@ -49,7 +51,7 @@ export class MakebuzzComponent implements OnInit {
     buzz.longitude = this.loc.coords.longitude;
     buzz.latitude = this.loc.coords.latitude;
 
-    // this.Buzz.makeBuzz(buzz).subscribe()
+    this.Buzz.makeBuzz(buzz).subscribe();
     this.ref.close(this.form.value);
   }
 

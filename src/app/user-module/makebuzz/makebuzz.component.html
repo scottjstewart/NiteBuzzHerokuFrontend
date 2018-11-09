@@ -3,33 +3,51 @@
   <mat-dialog-content [formGroup]="form">
     <p>
       <mat-form-field appearance="outline" color="accent">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title" formControlName="title" />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline" color="accent">
         <mat-label>Location</mat-label>
-        <input matInput placeholder="Location Name" formControlName="location">
+        <input
+          matInput
+          placeholder="Location Name"
+          formControlName="location"
+        />
       </mat-form-field>
     </p>
     <p>
       <mat-form-field appearance="outline" color="accent">
         <mat-label>Category</mat-label>
-        <input matInput placeholder="Category" formControlName="category">
+        <input matInput placeholder="Category" formControlName="category" />
         <mat-hint>e.g. bar, concert, etc.</mat-hint>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field appearance="outline" color="accent">
         <mat-label>Price</mat-label>
-        <input matInput placeholder="Price" formControlName="price">
+        <input matInput placeholder="Price" formControlName="price" />
       </mat-form-field>
     </p>
     <p>
       <mat-form-field appearance="outline" color="accent">
         <mat-label>Fun Factor</mat-label>
-        <input matInput placeholder="Fun Factor (1-5)" formControlName="funFactor">
+        <input
+          matInput
+          placeholder="Fun Factor (1-5)"
+          formControlName="funFactor"
+        />
       </mat-form-field>
     </p>
     <p>
       <mat-form-field appearance="outline" color="accent">
         <mat-label>Details</mat-label>
-        <textarea matInput placeholder="Details" formControlName="details"></textarea>
+        <textarea
+          matInput
+          placeholder="Details"
+          formControlName="details"
+        ></textarea>
       </mat-form-field>
     </p>
   </mat-dialog-content>
