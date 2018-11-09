@@ -1,21 +1,21 @@
 <ul>
   <li>
-    <a routerLink="" [class.activated]="currentUrl == '/'">
+    <a routerLink="">
       Home
     </a>
   </li>
   <li>
-    <a *ngIf="logStat===false" routerLink="/login" [class.activated]="currentUrl == '/login'">
+    <a *ngIf="logStat===false" routerLink="/login">
       Login
     </a>
     <a *ngIf="logStat===true" (click)="logout()">Logout</a>
   </li>
   <li *ngIf="logStat===false">
-    <a routerLink="/signup" [class.activated]="currentUrl == '/signup'">
+    <a routerLink="/signup">
       Signup
     </a>
   </li>
-  <li> <a routerLink="/about" [class.activated]="currentUrl == '/about'">
+  <li> <a routerLink="/about">
       Buzzes!
     </a>
   </li>
@@ -23,7 +23,7 @@
     <a>Start a Buzz</a>
   </li>
   <li>
-    <a routerLink="/contact" [class.activated]="currentUrl == '/contact'">
+    <a routerLink="/contact">
       Contact
     </a>
   </li>
